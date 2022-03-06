@@ -4,7 +4,7 @@ The files in this repository were used to configure the network depicted below.
 - [Azure Network Diagram](Diagrams/Azure_Network_Diagram.jpg)
 
 
-These files have been tested and used to generate a live ELK deployment on Azure. They can be used to either recreate the entire deployment pictured above. Alternatively, select portions of the elk_playbook file may be used to install only certain pieces of it, such as Filebeat.
+These files have been tested and used to generate a live ELK deployment on Azure. They can be used to recreate the entire deployment pictured above. Alternatively, select portions of the elk_playbook file may be used to install only certain pieces of it, such as Filebeat.
 
   - [ELK_Playbook](Ansible/ELK_Playbook.yml)
   
@@ -21,12 +21,12 @@ This document contains the following details:
 
 The main purpose of this network is to expose a load-balanced and monitored instance of DVWA, the D*mn Vulnerable Web Application.
 
-*`Load balancing ensures that the application will be highly available, in addition to restricting traffic to the network. Load balancers protect availability for web servers; To further assist in securing the virtual network, jump boxes are used. Jump boxes allow a single access point. `*
+*`Load balancing ensures that the application will be highly available, in addition to restricting traffic to the network. Load balancers protect availability for web servers, to further assist in securing the virtual network jump boxes can be used. Jump boxes allow a single access point as well as centralized deployment. `*
 
 
-Integrating an ELK server allows users to easily monitor the vulnerable VMs for changes to the file system and system metrics.
-- *Filebeat looks through system logs for system level changes.*
-- *Metricbeat records metrics and statistic.*
+Integrating an ELK server allows users to easily monitor the vulnerable VMs for changes to the file system and system metrics, which the ELK stack uses beats to achieve. 
+- *Filebeat looks through system logs for system level changes to assist in identifying malicious activity.*
+- *Metricbeat records metrics and statistics of the webservers.*
 
 
 The configuration details of each machine may be found below.
@@ -62,7 +62,7 @@ A summary of the access policies in place can be found in the table below.
 ### Elk Configuration
 
 Ansible was used to automate configuration of the ELK machine. No configuration was performed manually, which is advantageous because 
-***`Less user interaction per machine; More efficiency and ease of deployment. `***
+***`there's less user interaction per machine, which in turn causes more efficiency and ease of deployment. `***
 
 The playbook implements the following tasks:
 - Initializes the playbook name, the host and the user. 
